@@ -99,9 +99,10 @@ class _CricketGameScreenState extends State<CricketGameScreen> {
                   ),
                 ],
               ),
-              const SizedBox(height: 40),
-              if (currentBallResult.isNotEmpty)
-                Text(
+              const Spacer(),
+              SizedBox(
+                height: 32,
+                child: Text(
                   currentBallResult,
                   style: const TextStyle(
                     color: Colors.white,
@@ -109,7 +110,8 @@ class _CricketGameScreenState extends State<CricketGameScreen> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              const Spacer(),
+              ),
+              const SizedBox(height: 16),
               if (ballsRemaining > 0)
                 ElevatedButton(
                   onPressed: playBall,
@@ -154,7 +156,7 @@ class _CricketGameScreenState extends State<CricketGameScreen> {
                     ),
                   ),
                 ),
-              const SizedBox(height: 30),
+              const Spacer(),
             ],
           ),
         ),
